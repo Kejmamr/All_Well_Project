@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+        <img style="margin-top: 20px; margin-left: 54px;" src="All-Well-logo.jpg">
+                      <%if(status=="loggedIn"){%>
+                        <div class="container">
+                        <center><p><b>welcome <%=user.email%></b></p></center>
+
+                        <center><h1 class="mx-auto" style="left: 25%; height:40px;
+                                                          color: #006EFF;">
+                                                          Access your test app
+                        </h1></center>
+                        <div class="card"  style="left: 25%; border-radius: 8px; margin-top: 50px; width: 600px;">
+                          <article class="card-body">
+                            <center><p><b>This app let’s you change the color of the button below 
+                              from green to red  each time you click it!  isnt’ that amazing?</b></p></center>
+                          </article>
+                        </div>
+                        <center><button class="btn btn-primary btn-block" 
+                                        style="margin-top: 10px;height: 50px; 
+                                        width: 400px; border-radius: 10px; background:
+                                         #4EE0BC; color: black;"><a style="color: black; 
+                                         text-decoration: none;" href="/the-app-red" >
+                                         <b>Change the color of this button now</b></a></center></button>
+                      </div>
+
+                      <button class="btn btn-primary btn-block" style="margin-left: 75%; margin-top: 50px; 
+                      height: 50px; width: 100px; border-radius: 10px; 
+                      background: #4EE0BC; color: black; text-decoration: none;">
+                      <b><a style="color: black; text-decoration: none;" href="/logout" >Logout</a></b></button>
+                      
+                      <%}else{%>
+                        <div class="container">
+                          <div class="row">
+                               <div class="col-md-6" style="margin-top: 20px;  position: relative;">
+                                   <img src="Type=Pagamenti.png">
+                               </div>
+                               <div class="col-md-6" style="margin-top: 40px;">
+                         <h1 class="mx-auto" style="width: 535px; height:40px;
+                                                     color: #006EFF;">
+                                                     Access your test app
+                         </h1>
+                        <aside >
+                <div class="card" style="border-radius: 8px; margin-top: 50px; width: 400px;">
+                  <article class="card-body">
+                     <h4>Insert your credential</h4>
+                 <form onsubmit="return false;" method="POST" name="form">
+                     <div class="form-group" style="margin-top: 30px;">
+                       <input name="email" class="form-control" placeholder="Email" id="email" type="email" autocomplete="off" required>
+                     </div> 
+                     <div style="margin-top: 20px;"class="form-group">
+                       <input name="password" class="form-control" placeholder="Password" id="password" type="password" password="password" autocomplete="off" required>
+                     </div>
+                     <div class="alert alert-danger" role="alert" id="error" style="display: none;"></div>
+                     <div class="alert alert-succes" role="alert" id="success" style="display: none"></div>
+                     <p style="margin-top: 15px; text-decoration: none;"><b>have you forgot your password? click <a style="color: black;" href="/sendEmail">here</a></b></p>
+                     <div class="form-group">
+                        <button type="submit" style="border-radius: 20px; margin-left: 10px; margin-top: 10px; width: 300px; border-radius: 10px; 
+                        background: #4EE0BC; color: black; height: 50px;" class="btn btn-primary btn-block"><a style="text-decoration: none; color: black;" href="/"><b>Log in</b></a></button>
+                      </div>                                                           
+                    </form>
+                    </article>
+                   </div>
+                   <p style="margin-top: 15px;"><b>you don't have a profile yet? click <a style="color: black;" href="/register">here</a></b></p>
+            </div>
+        </div>     
+              <%}%>
+                   
+    <script src="js/login.js"></script>
+
+</body>
+</html>

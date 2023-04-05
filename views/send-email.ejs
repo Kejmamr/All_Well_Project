@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reset Email</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    </head>
+    <body class="container mt-3">
+        <% if (messages.error) { %>
+            <p style="color:red"><%- messages.error %></p>
+            <% } %>
+            <% if (messages.success) { %>
+            <p style="color:green"><%- messages.success %></p>
+            <% } %>
+        <img style="margin-top: 20px; margin-left: 54px;" src="All-Well-logo.jpg">    
+     <div class="container">
+        <div class="row">
+             <div class="col-md-6" style="margin-top: 20px;  position: relative;">
+                 <img src="Type=Pagamenti.png">
+             </div>
+             <div class="col-md-6" style="margin-top: 40px;">
+                 <h1 class="mx-auto" style="width: 535px; height:40px;
+                                        color: #006EFF;">
+                                        Reset your password
+                 </h1>
+                <aside >
+                <div class="card" style="border-radius: 8px; margin-top: 50px; width: 400px;">
+                  <article class="card-body">
+                     <h4><b>Have you forgot your password?</b></h4>
+                     <p>Do not worry, insert here your email and we will send you a link to reset your password.</p>
+                 <form action="/reset-password-email" method="post" name="form1">
+                     <div class="form-group" style="margin-top: 30px;">
+                       <input id="email" name="email" class="form-control" placeholder="Email" type="email" autocomplete="off" required>
+                     </div> <!-- form-group// -->
+                     <div class="form-group">
+                    
+                       <button style="border-radius: 20px; margin-left:10px; margin-top: 10px; background: #4EE0BC; width: 300px; height: 50px; color: black;"  type="submit" class="btn btn-primary btn-block"><b>Reset your password</b></button>
+                      </div> <!-- form-group// -->                                                           
+                 </form>
+                 </article>
+                </div>
+         </div>
+     </div>
+    </body>
+</html>
