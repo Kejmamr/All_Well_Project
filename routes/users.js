@@ -62,7 +62,7 @@ function sendEmail(email, token) {
         from: 'allwellresetpass@hotmail.com',
         to: email,
         subject: 'Reset Password Link',
-        html: '<img src="https://all-well.it/wp-content/uploads/2022/05/All-Well-logo-light-optimized.png"><br><center>Hi! We received a request to reset your passowrd.<br>Please click on the link below to proceed<br> <a  style="text-decoration: none; border-radius: 20px; margin-left: 10px; margin-top: 10px; width: 100px; border-radius: 10px; background: #4EE0BC; color: black; height: 50px;" href="https://all-well-project.onrender.com/reset-password?token='+ token +'"><b>Reset password link</b></a></center>'
+        html: '<img src="https://all-well.it/wp-content/uploads/2022/05/All-Well-logo-light-optimized.png"><br><center>Hi! We received a request to reset your passowrd.<br>Please click on the link below to proceed<br> <a  style="text-decoration: none; border-radius: 20px; margin-left: 10px; margin-top: 10px; width: 100px; border-radius: 10px; background: #4EE0BC; color: black; height: 50px;" href="https://all-mmgn.onrender.com/reset-password?token='+ token +'"><b>Reset password link</b></a></center>'
     };
     mail.sendMail(mailOptions, function(error, info) {
         if (error) {
