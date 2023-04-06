@@ -25,7 +25,7 @@ app.use("/js", express.static(__dirname + "/public/js"))
 app.use("/css", express.static(__dirname + "/public/css"))
 app.use("/api", require("./controllers/auth"));
 app.use(session({ 
-    secret: '1',
+    secret: 'AAA',
     resave: false,
     saveUninitialized: true,
     cookie: { maxAge: 60000 }
